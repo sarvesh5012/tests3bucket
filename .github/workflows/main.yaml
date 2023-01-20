@@ -18,4 +18,4 @@ jobs:
         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         aws-region: us-west-2
     - name: Copy files to the production website with the AWS CLI
-      run: aws s3 cp index.html s3://tests3bucketfromgit/
+      run: aws s3 sync . s3://tests3bucketfromgit/
